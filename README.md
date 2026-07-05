@@ -1,5 +1,7 @@
 # Oriz MMI — Tickertape Market Mood Index Mirror
 
+[![GitHub stars](https://img.shields.io/github/stars/chirag127/mmi-api?style=social)](https://github.com/chirag127/mmi-api/stargazers)
+
 ![Oriz MMI](logo.png)
 
 Hourly mirror of [Tickertape's Market Mood Index](https://www.tickertape.in/market-mood-index) — a 0-100 sentiment gauge for the Indian equity market. Scraped by GitHub Actions, served as static JSON via GitHub Pages and `raw.githubusercontent.com`. Zero Cloudflare Workers, zero ongoing cost.
