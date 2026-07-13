@@ -1,9 +1,10 @@
 {
-  "name": "oriz-mmi-tickertape-mmi-api",
+  "name": "mmi-tickertape",
   "version": "0.2.0",
   "description": "Tickertape Market Mood Index mirror — scraped hourly by GitHub Actions, served via GitHub Pages + raw.githubusercontent.com.",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@10.34.3",
   "scripts": {
     "scrape": "node scripts/scrape.mjs"
   },

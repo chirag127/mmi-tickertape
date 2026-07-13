@@ -13,17 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10.34.3
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - uses: actions/cache@v6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-      - run: npm install --no-audit --no-fund
-      - run: node scripts/scrape.mjs
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run scrape
       - name: Commit + push
         run: |
           git config user.name 'github-actions[bot]'

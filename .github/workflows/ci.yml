@@ -2,6 +2,5 @@ name: ci
 on: [push, pull_request]
 jobs:
   ci:
-    uses: chirag127/workflows/.github/workflows/ci-astro-api.yml@main
+    uses: chirag127/workflows/.github/workflows/ci-data-scrape-api.yml@main
     secrets: inherit
-# retrigger: 2026-07-03 (post chirag127/workflows @ 9bb12fb)
